@@ -9,6 +9,8 @@ body{
   "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
   "Open Sans", "Helvetica Neue", sans-serif;
 }
-.appTitle{
-  margin-left: 10px;
+header{
+  text-align: center;
+  grid-row: 1/2;
+  grid-column: 2/12;
 }
