@@ -1,15 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import TodoList from './TodoCollection';
+import TodoForm from './TodoForm';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
 
   return (
-    <>
-      <div>Hello world</div>
-    </>
+
+    
+    <div className="todoList">
+      <h3>List</h3>
+       <ul>
+         {TodoList.map((todo, index) =>(
+          <li key={index}>{todo}</li>
+         ))}
+       </ul>
+    </div>
+    
   )
 }
 
