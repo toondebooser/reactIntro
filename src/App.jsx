@@ -1,5 +1,5 @@
 import './App.css'
-import TodoList from './TodoCollection';
+import Todo from './TodoCollection';
 import TodoForm from './TodoForm';
 
 const App = () => {
@@ -7,14 +7,16 @@ const App = () => {
   return (
 
     
-    <div className="todoList">
-      <h3>List</h3>
-       <ul>
-         {TodoList.map((todo, index) =>(
-          <li key={index}>{todo}</li>
-         ))}
-       </ul>
-    </div>
+      <div className="content">
+        <div className="todoForm">
+          {<TodoForm />}
+        </div>
+        <div className="todoList">
+          {<Todo />}
+        </div>
+      </div>
+      
+    
     
   )
 }
