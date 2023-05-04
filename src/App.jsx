@@ -1,12 +1,15 @@
 import "./App.css";
-import Todo from "./TodoCollection";
 import TodoForm from "./TodoForm";
+import TodoListBuilder from "./TodoListBuilder";
+import { useRef, useState,useEffect } from "react";
+
 
 const App = () => {
+  const [todos, setTodos] = useState(null);
   return (
     <div className="content">
-      <div className="todoForm">{<TodoForm />}</div>
-      <div className="todoList">{<Todo />}</div>
+      <div className="todoForm">{<TodoForm todos={todos} setTodos={setTodos} />}</div>
+      <div className="todoList">{<TodoListBuilder todos={todos} />}</div>
     </div>
   );
 };
