@@ -18,7 +18,7 @@ const TodoForm = ({ todos, setTodos }) => {
   },[])
 
   useEffect(() => {
-    if(todos !== null){
+    if(todos.length > 0){
     localStorage.setItem(storage_todo, JSON.stringify(todos))
     }
   }, [todos]);

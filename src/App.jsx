@@ -5,7 +5,7 @@ import { useRef, useState,useEffect } from "react";
 
 
 const App = () => {
-  const [todos, setTodos] = useState(null);
+  const [todos, setTodos] = useState([]);
   return (
     <div className="content">
       <div className="todoForm">{<TodoForm todos={todos} setTodos={setTodos} />}</div>
