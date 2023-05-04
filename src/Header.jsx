@@ -3,7 +3,7 @@ const Header = ()=>{
 
     return(
         <header>
-      <h1 class="appTitle">{currentUser}'s Todo App</h1> 
+      <h1 className="appTitle">{currentUser}'s Todo App</h1> 
       </header>
     )
 }
