@@ -1,38 +1,36 @@
 import { useRef, useState, useEffect } from "react";
-import{v4 as uuidv4}   from 'uuid'
-
-
+import { v4 as uuidv4 } from "uuid";
 
 const storage_todo = "todoList";
 
 const TodoForm = ({ todos, setTodos }) => {
   const userInput = useRef();
 
-  useEffect(()=>{
-    const storedTodos = JSON.parse(localStorage.getItem(storage_todo))
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem(storage_todo));
     if (storedTodos) {
-        setTodos(storedTodos)
-       console.log(storedTodos);}
-    
+      setTodos(storedTodos);
+      console.log(storedTodos);
+    }
+  }, []);
 
-  },[])
+
+
 
   useEffect(() => {
-    if(todos.length > 0){
-    localStorage.setItem(storage_todo, JSON.stringify(todos))
+    if (todos.length > 0) {
+      localStorage.setItem(storage_todo, JSON.stringify(todos));
     }
   }, [todos]);
 
   const handleForm = (e) => {
     e.preventDefault();
-    const name = userInput.current.value
+    const name = userInput.current.value;
     if (name === "") return;
-    setTodos(prevTodos => {
-      return [...prevTodos, {id: uuidv4(), name: name, status: false}]
-    })
-    userInput.current.value = null
-      
-    
+    setTodos((prevTodos) => {
+      return [...prevTodos, { id: uuidv4(), name: name, status: false }];
+    });
+    userInput.current.value = null;
   };
 
   return (

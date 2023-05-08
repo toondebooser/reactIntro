@@ -19,6 +19,10 @@
 ul{
   list-style: none;
 }
+li{
+  margin-top: 10px;
+  word-break: break-all;
+}
 .submitButton{
   border: none;
   background-color:lightblue;
@@ -30,6 +34,13 @@ ul{
 }
 .checkbox:hover{
 cursor: pointer;
+}
+.deleteButton{
+  border: none;
+  color: red;
+  margin-right:  10px ;
+  background-color: lightpink;
+  
 }
 @media only screen and (max-width: 400px){
   html{
