@@ -7,17 +7,19 @@
 }
 .todoForm{
   grid-row: 1/2;
-  grid-column: 2/12;
+  grid-column: 4/10;
+  word-break: break-all;
   justify-self: center;
 }
 .todoList{
   
   grid-row: 2/3;
-  grid-column: 1/13;
+  grid-column: 3/10;
   justify-self: center;
 }
 ul{
   list-style: none;
+  width: inherit;
 }
 li{
   margin-top: 10px;
@@ -42,11 +44,22 @@ cursor: pointer;
   background-color: lightpink;
   
 }
+.counter{
+  grid-column: 4/10;
+  grid-row: 3/4;
+  justify-self: center;
+}
 @media only screen and (max-width: 400px){
   html{
     background-image: url("./assets/background.jpeg");
     background-repeat: no-repeat;
     background-size:cover;
     height: 100vh;
+  }
+  .todoList{
+  
+    grid-row: 2/3;
+    grid-column: 1/13;
+    justify-self: center;
   }
 }
